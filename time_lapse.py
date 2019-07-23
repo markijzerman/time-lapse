@@ -43,7 +43,7 @@ class SentinelHubTimelapse(object):
                                           custom_url_params={CustomUrlParam.TRANSPARENT: True},
                                           time_difference=time_difference)
 
-        self.fullres_request = WmsRequest(data_folder=project_name + '/fullres', layer=layer, bbox=bbox,
+        self.fullres_request = WcsRequest(data_folder=project_name + '/fullres', layer=layer, bbox=bbox,
                                           time=time_interval, resx='10m', resy='10m',
                                           maxcc=1.0, image_format=MimeType.PNG, instance_id=instance_id,
                                           custom_url_params={CustomUrlParam.TRANSPARENT: True,
